@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "very-dark-grayish-blue": "hsl(217, 19%, 35%)",
+              "desaturated-dark-blue": "hsl(214, 17%, 51%)",
+              "grayish-blue": "hsl(212, 23%, 69%)",
+              "light-grayish-blue": "hsl(210, 46%, 95%)",
+            },
+            fontSize: {
+              base: "13px",
+            },
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"], // Ajout de la police Manrope à Tailwind
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Attribution Styles -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body class="bg-light-grayish-blue grid place-items-center h-screen">
+    <div>
+      <div
+        class="bg-white sm:w-3/5 w-4/5 flex flex-col sm:flex-row mx-auto rounded-xl shadow-xl"
+      >
+        <img
+          src="images/drawers.jpg"
+          alt="Image of drawers"
+          class="sm:w-1/3 w-full object-cover sm:rounded-l-lg sm:rounded-t-none rounded-t-lg h-36 sm:h-auto"
+        />
+        <div class="flex flex-col sm:p-8 py-6 px-8">
+          <h1 class="text-very-dark-grayish-blue font-bold text-lg sm:text-2xl">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p class="text-desaturated-dark-blue text-xs sm:text-sm mt-2 mb-8">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+
+          <div class="flex flex-row relative">
+            <img
+              src="images/avatar-michelle.jpg"
+              alt="Avatar of Michelle Appleton"
+              class="rounded-full w-10 h-10"
+            />
+            <div class="flex flex-col ml-4 text-sm">
+              <p class="text-very-dark-grayish-blue font-bold">
+                Michelle Appleton
+              </p>
+              <p class="text-grayish-blue">28 Jun 2020</p>
+            </div>
+            <button
+              class="bg-light-grayish-blue transition-all hover:bg-grayish-blue rounded-full w-10 h-10 ml-auto"
+              id="partager"
+            >
+              <div class="relative flex flex-col items-center">
+                <!-- Icône de partage en dessous -->
+                <img
+                  src="images/icon-share.svg"
+                  alt="Icône de partage"
+                  class="mx-auto fill-current"
+                />
+              </div>
+            </button>
+            <div
+              id="liste_reseaux"
+              class="opacity-0 absolute -top-4 sm:-top-24 sm:py-4 sm:w-max sm:translate-x-20 items-center -right-8 flex bg-very-dark-grayish-blue w-[calc(100%+4rem)] shadow-xl py-5 px-8 rounded-b-lg sm:rounded-lg text-white transition duration-500 ease-in-out z-10"
+            >
+              <p
+                class="mr-4 uppercase tracking-[.4rem] text-sm font-extralight"
+              >
+                Share
+              </p>
+              <img
+                src="images/icon-facebook.svg"
+                alt="Facebook icon"
+                class="h-6 w-6 mr-4 fill-current"
+              />
+              <img
+                src="images/icon-twitter.svg"
+                alt="Twitter icon"
+                class="h-6 w-6 mr-4 fill-current"
+              />
+              <img
+                src="images/icon-pinterest.svg"
+                alt="Pinterest icon"
+                class="h-6 w-6 fill-current"
+              />
+              <button
+                class="sm:hidden bg-grayish-blue transition-all hover:bg-light-grayish-blue fill-light-grayish-blue rounded-full w-10 h-10 ml-auto"
+                id="partager_banniere"
+              >
+                <div class="relative flex flex-col items-center">
+                  <!-- Icône de partage en dessous -->
+                  <img
+                    src="images/icon-share.svg"
+                    alt="Icône de partage"
+                    class="mx-auto fill-current"
+                  />
+                </div>
+              </button>
+              <div
+                class="hidden sm:block absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-t-[10px] border-t-very-dark-grayish-blue border-r-[10px] border-r-transparent"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution mt-4">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://emma-roizot.fr" target="_blank">Emma</a>.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
